@@ -1,19 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2jnbdsti0yw"]
+[gd_scene load_steps=8 format=3 uid="uid://b2jnbdsti0yw"]
 
 [ext_resource type="PackedScene" uid="uid://nyfg2il5vxxo" path="res://scenes/gound/ground.tscn" id="1_833wu"]
 [ext_resource type="PackedScene" uid="uid://b5ueiqwkjn0ry" path="res://scenes/background_01/background_02.tscn" id="1_jxtlx"]
 [ext_resource type="PackedScene" uid="uid://dajj8x8vd1a6b" path="res://scenes/background_01/background_01.tscn" id="2_4m302"]
+[ext_resource type="Texture2D" uid="uid://dt5dmc161xhfn" path="res://assets/clounds.png" id="2_5l74i"]
 [ext_resource type="PackedScene" uid="uid://b5jx543uwi30i" path="res://scenes/knight/knight.tscn" id="2_m5buu"]
+[ext_resource type="Texture2D" uid="uid://ctnpumelaioiw" path="res://assets/sun.png" id="5_ff0j3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_04gns"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(582, 335.25)
+rotation = 3.14159
+scale = Vector2(1193, -697.5)
+texture = SubResource("CanvasTexture_04gns")
+
+[node name="Sun" type="Sprite2D" parent="."]
+position = Vector2(996, 72)
+texture = ExtResource("5_ff0j3")
+
+[node name="Clounds" type="Sprite2D" parent="."]
+position = Vector2(521, 147)
+scale = Vector2(1, 1)
+texture = ExtResource("2_5l74i")
 
 [node name="Background_02" type="Node2D" parent="."]
 
 [node name="Background_02_01" parent="Background_02" instance=ExtResource("1_jxtlx")]
-position = Vector2(-12, 18)
+position = Vector2(-4, -50)
 
 [node name="Background_02_02" parent="Background_02" instance=ExtResource("1_jxtlx")]
-position = Vector2(1141, 18)
+position = Vector2(1149, -50)
 
 [node name="Background_01" type="Node2D" parent="."]
 
