@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2jnbdsti0yw"]
+
+[ext_resource type="PackedScene" uid="uid://nyfg2il5vxxo" path="res://scenes/gound/ground.tscn" id="1_833wu"]
+[ext_resource type="PackedScene" uid="uid://b5ueiqwkjn0ry" path="res://scenes/background_01/background_02.tscn" id="1_jxtlx"]
+[ext_resource type="PackedScene" uid="uid://dajj8x8vd1a6b" path="res://scenes/background_01/background_01.tscn" id="2_4m302"]
+[ext_resource type="PackedScene" uid="uid://b5jx543uwi30i" path="res://scenes/knight/knight.tscn" id="2_m5buu"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background_02" type="Node2D" parent="."]
+
+[node name="Background_02_01" parent="Background_02" instance=ExtResource("1_jxtlx")]
+position = Vector2(-12, 18)
+
+[node name="Background_02_02" parent="Background_02" instance=ExtResource("1_jxtlx")]
+position = Vector2(1141, 18)
+
+[node name="Background_01" type="Node2D" parent="."]
+
+[node name="Background_01_01" parent="Background_01" instance=ExtResource("2_4m302")]
+position = Vector2(-4, -43)
+
+[node name="Background_01_02" parent="Background_01" instance=ExtResource("2_4m302")]
+position = Vector2(1143, -56)
+
+[node name="Ground" parent="." instance=ExtResource("1_833wu")]
+
+[node name="Ground2" parent="." instance=ExtResource("1_833wu")]
+position = Vector2(1153, 0)
+
+[node name="Knight" parent="." instance=ExtResource("2_m5buu")]
+position = Vector2(251, 459)
